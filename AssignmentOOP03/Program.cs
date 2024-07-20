@@ -12,8 +12,13 @@
             #endregion 
 
             #region P02Q02
-
+           BasicAuthenticationService authenticationService = new BasicAuthenticationService();
+            Console.WriteLine(authenticationService.AuthorizeUser("Bilal", "admin"));
+            Console.WriteLine(authenticationService.AuthenticateUser("Bilal", "666666"));
+            Console.WriteLine(authenticationService.AuthorizeUser("Bilal", "user"));
+            Console.WriteLine(authenticationService.AuthenticateUser("Bilal", "6665266"));
             #endregion
+
 
         }
     }

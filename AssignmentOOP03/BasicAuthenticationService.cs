@@ -9,7 +9,7 @@ namespace AssignmentOOP03
 {
     internal class BasicAuthenticationService:IAuthenticationService
     {
-        Users[] usersarr = new Users[] { new Users { Name = "Bial", Password = "666666",Role ="admin" }
+        Users[] usersarr = new Users[] { new Users { Name = "Bilal", Password = "666666",Role ="admin" }
         , new Users { Name = "Ali", Password = "55556", Role = "user" },
             new Users { Name = "Yahya", Password = "677776",Role ="user" } };
 
