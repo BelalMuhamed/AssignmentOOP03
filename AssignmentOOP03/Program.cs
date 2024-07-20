@@ -1,4 +1,6 @@
-﻿namespace AssignmentOOP03
+﻿using AssignmentOOP03.Interfaces;
+
+namespace AssignmentOOP03
 {
     internal class Program
     {
@@ -19,7 +21,19 @@
             Console.WriteLine(authenticationService.AuthenticateUser("Bilal", "6665266"));
             #endregion
 
+            #region P02Q03
+            INotificationService emailService = new EmailNotificationService();
+            INotificationService smsService = new SmsNotificationService();
+            INotificationService pushService = new PushNotificationService();
 
+            string recipient = "user@.com";
+            string message = "This is a test notification.";
+
+            emailService.SendNotification(recipient, message);
+            smsService.SendNotification(recipient, message);
+            pushService.SendNotification(recipient, message);
         }
+        #endregion
+    
     }
 }
